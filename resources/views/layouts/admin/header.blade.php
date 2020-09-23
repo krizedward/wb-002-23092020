@@ -1,9 +1,9 @@
   <!-- Logo -->
     <div class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>R</b></span>
+      <span class="logo-mini"><b>M</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Rumah</b> Cerdas</span>
+      <span class="logo-lg"><b>Majoo</b></span>
     </div>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -16,11 +16,7 @@
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              @if(Auth::check() && Auth::user()->level == 'member')
-              <img src="{{ asset('uploads/anggota/'.Auth::user()->member->image) }}" class="user-image" alt="User Image">
-              @else
               <img src="{{ asset('adminlte/dist/img/user.jpg')}}" class="user-image" alt="User Image">
-              @endif
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">

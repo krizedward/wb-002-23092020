@@ -47,6 +47,50 @@
   <!-- ./wrapper -->
   @stack('script')
   </body>
+@else
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+  <header class="main-header">
+    @include('layouts.admin.header')
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    @include('layouts.admin.sidebar')
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <section class="content-header">
+      @yield('content-header')
+    </section>
+
+    
+    
+    <section class="content">
+      @yield('content')
+    </section>
+
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="container text-center">
+      <strong>2020 © <a href="#">PT.Majoo Teknologi Indonesia</a></strong> 
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+@include('layouts.admin._script')
+</body>
 @endif
 </html>
 

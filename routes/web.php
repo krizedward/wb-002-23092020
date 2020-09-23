@@ -16,5 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('keluar',function(){
+    \Auth::logout();
+    return redirect('login');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
+
