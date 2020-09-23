@@ -56,9 +56,10 @@
       <section class="content">
         <!-- Custom -->
         <div class="row">
+          @foreach($data as $dt)
             <div class="col-lg-3 col-xs-6">
                 <div class="box">
-                  @foreach($data as $dt)
+                  
                     <div class="box-header">
                         <img src="{{ asset('img/'.$dt->image) }}">
                     </div>
@@ -70,10 +71,10 @@
                     <div class="box-footer text-center">
                         <a href="javascript:void(0)" class="btn btn-default">Beli</a>
                     </div>
-                   @endforeach 
                 </div>
             </div>
             <!-- ./col -->
+          @endforeach 
           </div>
         </div>
         <!-- /.Custom -->
