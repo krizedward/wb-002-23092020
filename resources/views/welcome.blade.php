@@ -58,22 +58,19 @@
         <div class="row">
             <div class="col-lg-3 col-xs-6">
                 <div class="box">
+                  @foreach($data as $dt)
                     <div class="box-header">
-                        <img src="{{ asset('img/paket-advance.png') }}">
+                        <img src="{{ asset('img/'.$dt->image) }}">
                     </div>
                     <div class="box-body text-center">
-                        <h4>majoo pro</h4>
-                        <h4>Rp 2.750.000</h4>
-                        <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>{{ $dt->name }}</h4>
+                        <h4>Rp {{ $dt->price}}</h4>
+                        <p class="text-left">{{ $dt->description }}</p>
                     </div>
                     <div class="box-footer text-center">
                         <a href="javascript:void(0)" class="btn btn-default">Beli</a>
                     </div>
+                   @endforeach 
                 </div>
             </div>
             <!-- ./col -->

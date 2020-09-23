@@ -12,7 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = App\Product::all();
+    return view('welcome', compact('data'));
+});
+
+
+Route::group(['middleware'=>'auth'], function() {
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('products', 'ProductController');
+//Route::resource('orders', 'OrderController');
+
 });
 
 Auth::routes();
@@ -20,6 +30,4 @@ Route::get('keluar',function(){
     \Auth::logout();
     return redirect('login');
 });
-
-Route::get('/home', 'HomeController@index')->name('home');
 
